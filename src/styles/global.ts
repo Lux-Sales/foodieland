@@ -7,7 +7,6 @@ export default createGlobalStyle`
   box-sizing: border-box;
   outline: 0;
   list-style-type: none;
-  background: url("background.jpg") no-repeat center;
   background-size: cover;
 }
 body, input, button{
