@@ -1,5 +1,7 @@
 # Foodieland
 
+###
+
 ## Requisitos do projeto:
 nodejs >= 14.XX.X <br/>
 Git >= 2.25.1
@@ -35,4 +37,5 @@ ou
   <li>React</li>
   <li>Typescript</li>
   <li>Firebase</li>
+  <li>Styled Components</li>
 </ol> -->
