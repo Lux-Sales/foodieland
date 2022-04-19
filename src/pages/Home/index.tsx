@@ -1,4 +1,5 @@
 import React from "react";
+import CategoryMenu from "../../components/CategorieMenu";
 import Header from "../../components/Header";
 import HotRecipeCard from "../../components/HotRecipeCard";
 import { Container } from "./styles";
@@ -12,6 +13,7 @@ function Home() {
         <HotRecipeCard />
         <div className="lateral-hot-recipe next-hot-recipe">&nbsp;</div>
       </div>
+      <CategoryMenu />
     </Container>
   );
 }
