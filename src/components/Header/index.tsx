@@ -7,7 +7,6 @@ import instagramLogo from "../../assets/instagram-icon.png";
 
 function Header() {
   return (
-    <>
       <Container>
         <a href="/">
         <img src={logo} alt="logo" />
@@ -51,7 +50,6 @@ function Header() {
           </ul>
         </nav>
       </Container>
-    </>
   );
 }
 
