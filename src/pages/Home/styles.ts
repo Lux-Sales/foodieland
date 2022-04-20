@@ -13,6 +13,7 @@ width: 1440px;
   height: 600px;
   width: 40px;
   margin-top: 60px;
+  border: none;
 }
 
 .previous-hot-recipe{
