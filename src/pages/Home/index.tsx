@@ -3,6 +3,7 @@ import CategoryMenu from "../../components/CategorieMenu";
 import Header from "../../components/Header";
 import HotRecipeCard from "../../components/HotRecipeCard";
 import { Container } from "./styles";
+import SimpleRecipes from "../../components/SimpleRecipes";
 
 export interface HotRecipe{
   name: string;
@@ -117,6 +118,7 @@ function Home() {
         />
       </div>
       <CategoryMenu />
+      <SimpleRecipes />
     </Container>
   );
 }
