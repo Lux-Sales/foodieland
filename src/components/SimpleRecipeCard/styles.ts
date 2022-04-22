@@ -5,11 +5,11 @@ export const Container = styled.div`
   height: 434px;
   background: linear-gradient(to top, #e7f9fd, #fff) no-repeat center;
   border-radius: 25px;
+  position: relative;
   button {
     position: absolute;
+    margin: 20px 0 0 330px;
     width: 48px;
-    left: 396px;
-    top: 1745px;
     height: 48px;
     border-radius: 50%;
     border: none;
@@ -19,8 +19,8 @@ export const Container = styled.div`
     svg {
       margin-top: 5px;
       color: #dbe2e5;
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
     }
   }
   img {
