@@ -4,22 +4,27 @@ import TimerIcon from "@mui/icons-material/Timer";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import JuicyHamburguer from '../../assets/juicy_hamburguer.png'
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { SimpleRecipe } from '../SimpleRecipes'
 
-function SimpleRecipeCard() {
+interface SimpleRecipeCardProps{
+  simpleRecipe: SimpleRecipe
+}
+function SimpleRecipeCard(props:SimpleRecipeCardProps) {
+  const {simpleRecipe} = props;
   return <Container>
     <button>
-      <FavoriteIcon />
+      <FavoriteIcon style={{color: simpleRecipe.favorited?"#FF6363":"#dbe2e5"}}/>
     </button>
-    <img src={JuicyHamburguer} alt="" />
-    <h1>Big and Juicy Wagyu Beef Cheeseburger</h1>
+    <img src={simpleRecipe.photo} alt="" />
+    <h1>{simpleRecipe.name}</h1>
     <div>
       <div>
         <TimerIcon />
-        <span>30 Minutes</span>
+        <span>{simpleRecipe.time}Minutes</span>
       </div>
       <div>
         <RestaurantIcon />
-        <span>Snack</span>
+        <span>{simpleRecipe.category}</span>
       </div>
     </div>
   </Container>;

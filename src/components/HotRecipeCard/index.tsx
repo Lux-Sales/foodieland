@@ -23,7 +23,7 @@ function HotRecipeCard(props: HotRecipeCardProps){
       <div className="info-div">
         <div className="info-card">
           <TimerIcon />
-          <span>{hotRecipe.time}</span>
+          <span>{hotRecipe.time} Minutes</span>
         </div>
         <div className="info-card">
           <RestaurantIcon />

@@ -18,7 +18,7 @@ export const Container = styled.div`
     justify-content: center;
     svg {
       margin-top: 5px;
-      color: #dbe2e5;
+
       width: 25px;
       height: 25px;
     }
