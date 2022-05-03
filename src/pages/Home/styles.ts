@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
 width: 1440px;
@@ -23,4 +23,4 @@ width: 1440px;
 .next-hot-recipe{
   border-radius: 45px 0px 0px 45px;
 }
-`
+`;

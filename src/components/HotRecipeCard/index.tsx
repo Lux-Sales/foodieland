@@ -1,29 +1,31 @@
-import React from "react";
-import { Container } from "./styles";
-import TimerIcon from "@mui/icons-material/Timer";
-import RestaurantIcon from "@mui/icons-material/Restaurant";
-import PlayCircleFilledWhiteIcon from "@mui/icons-material/PlayCircleFilledWhite";
-import { HotRecipe } from "../../pages/Home";
+import React from 'react';
+import TimerIcon from '@mui/icons-material/Timer';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
+import { Container } from './styles';
+import { HotRecipe } from '../../pages/Home';
 
 interface HotRecipeCardProps {
   hotRecipe: HotRecipe;
 }
 
-function HotRecipeCard(props: HotRecipeCardProps){
-  const hotRecipe = props.hotRecipe;
+function HotRecipeCard(props: HotRecipeCardProps) {
+  const { hotRecipe } = props;
   return (
     <Container>
       <div className="hot-label">
         <span>Hot Recipes</span>
       </div>
       <h1>{hotRecipe.name}</h1>
-      <p>
-        {hotRecipe.description}
-      </p>
+      <p>{hotRecipe.description}</p>
       <div className="info-div">
         <div className="info-card">
           <TimerIcon />
-          <span>{hotRecipe.time} Minutes</span>
+          <span>
+            {hotRecipe.time}
+            {' '}
+            Minutes
+          </span>
         </div>
         <div className="info-card">
           <RestaurantIcon />
@@ -32,10 +34,7 @@ function HotRecipeCard(props: HotRecipeCardProps){
       </div>
       <footer>
         <div className="user-card">
-          <img
-            src={hotRecipe.user.avatar}
-            alt="user-avatar"
-          />
+          <img src={hotRecipe.user.avatar} alt="user-avatar" />
           <div>
             <span>{hotRecipe.user.name}</span>
             <span>{hotRecipe.postedDate}</span>

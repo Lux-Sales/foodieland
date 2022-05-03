@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import chickenWings from '../../assets/chicken_wings.jpg'
+import styled from 'styled-components';
+import chickenWings from '../../assets/chicken_wings.jpg';
 
 export const Container = styled.div`
 width: 1310px;
@@ -109,6 +109,4 @@ margin-bottom: 140px;
       margin-right: 30px;
     }
   }
-`
-
-
+`;

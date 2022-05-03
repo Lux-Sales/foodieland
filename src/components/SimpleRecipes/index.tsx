@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { getSimpleRecipes } from "../../service/recipe";
-import SimpleRecipeCard from "../SimpleRecipeCard";
-import { Container } from "./styles";
+import React, { useEffect, useState } from 'react';
+import { getSimpleRecipes } from '../../service/recipe';
+import SimpleRecipeCard from '../SimpleRecipeCard';
+import { Container } from './styles';
 
 export interface SimpleRecipe{
   name:string,
@@ -12,28 +12,30 @@ export interface SimpleRecipe{
 }
 
 function SimpleRecipes() {
-  const [simpleRecipes, setSimpleRecipes] = useState<SimpleRecipe[]>([])
+  const [simpleRecipes, setSimpleRecipes] = useState<SimpleRecipe[]>([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     const fetchSimpleRecipes = async () => {
-      const simpleRecipes = await getSimpleRecipes();
-      setSimpleRecipes(simpleRecipes);
-    }
+      const recipes = await getSimpleRecipes();
+      setSimpleRecipes(recipes);
+    };
     fetchSimpleRecipes();
-  },[])
+  }, []);
   return (
     <Container>
       <h1>Simple and tasty recipes</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
+        tempor incididunt ut labore et dolore magna aliqut enim ad minim
+        {' '}
       </p>
       <div className="simple-recipe-grid">
-        {simpleRecipes.map((simpleRecipe,index) => {
-          return <SimpleRecipeCard
-          key={index}
-          simpleRecipe={simpleRecipe} />;
-        })}
+        {simpleRecipes.map((simpleRecipe) => (
+          <SimpleRecipeCard
+            key={simpleRecipe.name}
+            simpleRecipe={simpleRecipe}
+          />
+        ))}
       </div>
     </Container>
   );
