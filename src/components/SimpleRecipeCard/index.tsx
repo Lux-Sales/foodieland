@@ -11,15 +11,16 @@ interface SimpleRecipeCardProps {
 function SimpleRecipeCard(props: SimpleRecipeCardProps) {
   const { simpleRecipe } = props;
   const [favorited, setFavorited] = useState(simpleRecipe.favorited);
+
   return (
     <Container>
       <button
         type="button"
         onClick={() => {
-          simpleRecipe.favorited = !simpleRecipe.favorited;
+          setFavorited(!favorited);
         }}
       >
-        <FavoriteIcon style={{ color: simpleRecipe.favorited ? '#FF6363' : '#dbe2e5' }} />
+        <FavoriteIcon style={{ color: favorited ? '#FF6363' : '#dbe2e5' }} />
       </button>
       <img src={simpleRecipe.photo} alt="" />
       <h1>{simpleRecipe.name}</h1>
