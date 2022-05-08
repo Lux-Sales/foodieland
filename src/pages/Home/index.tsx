@@ -5,6 +5,7 @@ import HotRecipeCard from '../../components/HotRecipeCard';
 import { Container } from './styles';
 import SimpleRecipes from '../../components/SimpleRecipes';
 import { getHotRecipes } from '../../service/recipe';
+import CanBeAChef from '../../components/CanBeAChef';
 
 export interface HotRecipe {
   name: string;
@@ -67,6 +68,7 @@ function Home() {
       </div>
       <CategoryMenu />
       <SimpleRecipes />
+      <CanBeAChef />
     </Container>
   );
 }
