@@ -3,15 +3,21 @@
 
 name: Deploy to Firebase Hosting on PR
 'on':
-    workflow_run:
-      workflows: ["CI"]
-      types:
-        - completed
+  push:
+    branches: [ master ]
 jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
+      - name: Wait for CI to succeed
+        uses: lewagon/wait-on-check-action@v1.0.0
+        with:
+          ref: ${{ github.ref }}
+          check-name: 'Run CI'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
+      ...
       - uses: actions/checkout@v2
       - run: yarn && yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
