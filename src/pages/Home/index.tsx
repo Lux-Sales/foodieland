@@ -6,6 +6,7 @@ import { Container } from './styles';
 import SimpleRecipes from '../../components/SimpleRecipes';
 import { getHotRecipes } from '../../service/recipe';
 import CanBeAChef from '../../components/CanBeAChef';
+import axios from 'axios'
 
 export interface HotRecipe {
   name: string;
