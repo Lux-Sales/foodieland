@@ -17,7 +17,7 @@ jobs:
           check-name: 'Run CI'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
-      ...
+          
       - uses: actions/checkout@v2
       - run: yarn && yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
