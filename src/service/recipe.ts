@@ -1,4 +1,3 @@
-import api from './api';
 import JuicyHamburger from '../assets/juicy_hamburguer.png';
 import ChickenBaconPasta from '../assets/chicken_bacon_pasta.png';
 import ChickenRice from '../assets/chicken_rice.png';
