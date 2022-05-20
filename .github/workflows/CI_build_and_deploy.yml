@@ -28,7 +28,7 @@ jobs:
   build_and_preview:
     needs: CI
     runs-on: ubuntu-latest
-    if: │ github.event.pull_request.head.repo.full_name == github.repository && github.ref == 'refs/heads/master'
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v2
       - run: yarn && yarn build
